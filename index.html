@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreamloop – Interactive Comic</title>
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <section class="panel">
+    <div class="image-side" data-aos="fade-right">
+      <img src="images/panel1.jpg" alt="The boy falls asleep">
+    </div>
+    <div class="text-side" data-aos="fade-left">
+      <h1>The Boy Falls Asleep</h1>
+      <p>He lies in bed, slowly drifting into a deep dream...</p>
+      <p class="hint">Scroll to continue ↓</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="image-side" data-aos="fade-left">
+      <img src="images/panel2.jpg" alt="Dream world">
+    </div>
+    <div class="text-side" data-aos="fade-right">
+      <h1>The Dream Begins</h1>
+      <p>He finds himself in a surreal world filled with floating objects.</p>
+      <div class="floating-object" onclick="shuffleObjects(this)">🌙 ✨ ☁️</div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="image-side" data-aos="zoom-in-up">
+      <img src="images/panel3.jpg" alt="Strange feeling">
+    </div>
+    <div class="text-side" data-aos="fade-up">
+      <h1>Distorted Reality</h1>
+      <p>The dreamscape bends and melts before his eyes.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="image-side" data-aos="flip-left">
+      <img src="images/panel4.jpg" alt="Realization">
+    </div>
+    <div class="text-side" data-aos="flip-right">
+      <h1>Realization</h1>
+      <p>He realizes this is all a dream... or is it?</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="image-side" data-aos="zoom-in">
+      <img src="images/panel5.jpg" alt="Waking up">
+    </div>
+    <div class="text-side" data-aos="fade-up">
+      <h1>Waking Up</h1>
+      <p>He wakes up to the sound of an alarm clock.</p>
+      <button id="alarm" onclick="ringAlarm()">⏰ Tap to Ring</button>
+      <audio id="alarmSound" src="sounds/alarm.mp3" preload="auto"></audio>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="image-side" data-aos="fade-right">
+      <img src="images/panel6.jpg" alt="Still dreaming">
+    </div>
+    <div class="text-side" data-aos="fade-left">
+      <h1>Still Dreaming</h1>
+      <p>He looks out the window and realizes… the dream isn’t over.</p>
+      <p class="hint">Scroll back up to relive the dream ↻</p>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,   
+      offset: 100,      
+      once: true        
+    });
+  </script>
+</body>
+</html>
+
